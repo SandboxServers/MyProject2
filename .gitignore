@@ -12,3 +12,10 @@ Saved
 *.suo
 *.xcodeproj
 *.xcworkspace
+
+# Unreal .uproject backup left by the MCP bootstrap script
+*.uproject.bak
+
+# Python bytecode generated when the MCP plugin loads
+__pycache__/
+*.pyc
