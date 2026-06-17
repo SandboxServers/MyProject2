@@ -1,0 +1,21 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "MCP Full Control",
+	"Description": "Exposes arbitrary Python and console-command execution to the Unreal MCP server, giving an MCP client full control over the editor.",
+	"Category": "Scripting",
+	"CreatedBy": "Derek",
+	"EditorOnly": true,
+	"CanContainContent": true,
+	"IsExperimentalVersion": true,
+	"Installed": false,
+	"EnabledByDefault": true,
+	"Modules": [],
+	"Plugins": [
+		{
+			"Name": "ToolsetRegistry",
+			"Enabled": true
+		}
+	]
+}
