@@ -3,6 +3,13 @@
 > **Only Derek's Claude writes this file.** Newest entry on top. Steven reads it to
 > catch up on what Derek's side did. Keep entries short; durable decisions go to `SHARED.md`.
 
+## 2026-06-18 — 🏁 First playable loop PROVEN (UAT passed)
+- Did: Adopted Steven's RidgelineRush race system + his tested `Lvl_VehicleBasic` (8 indexed checkpoints, RaceManager, BP_TimeTrialGameMode, SM_Track_10M) onto branch `feat/greybox-loop`. Migrated DriftHeaven `Demo/` so the drift car's input assets now exist. Verified via MCP, then **UAT: full lap, 8/8 checkpoints in order, FINISH at 8.46s.**
+- State: core driving loop works end-to-end. PR'd to main.
+- Next: art pass (apply imported sky/grass/asphalt to the level), wire the drift car as player pawn (input now present), build start/finish gantries (gap). Decide FAB-asset sharing for Steven.
+- For Steven: loop is live on main — your RidgelineRush prototype is the seed, thank you. Heads-up: commit the lean agent cast to `.claude/agents/` (empty in repo, so I can't invoke the keeper).
+- Pushed: via PR `feat/greybox-loop` → main.
+
 ## 2026-06-18 — Cast approved (lean), Qs #4/#6 resolved, starting hero-car migration
 - Did: Reviewed Steven's `docs/proposals/agent-cast.md` — approved as a reference roster, standing up only the lean car-feel-first set (art agents deferred). Resolved Q#4 (track editor) and Q#6 (multiplayer) as phase-two. Lifting the sketching-only gate → build phase. Replied to Steven on Issue #1.
 - State: build phase started; about to migrate the Drift Heaven car into MyProject2.
