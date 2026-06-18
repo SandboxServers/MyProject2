@@ -52,8 +52,10 @@ Tier: **T1** must-have foundation · **T2** nice · **T3** polish/deferred
   are the gaps — deferred, not blocking.
 
 ## ✅ Tier-1 "claim now" checklist (minimum to start building)
-Claim each to your FAB library, then **Add to Project** (see asset-strategy.md). Verify
-each shows a free license that allows use in projects.
+**One-click:** run `pwsh docs/scripts/open-fab-assets.ps1` to open all Tier-1 links in your
+browser at once (add `-All` for the full list, `-List` to just print them). Then on each
+tab click **Add to Library**, and in UE: **FAB → My Library → Add to Project**.
+Verify each shows a free license that allows use in projects.
 - [ ] Drift Heaven (car) — https://www.fab.com/listings/53d81aa6-f8a8-40b5-a80c-ae53e6fd77bc
 - [ ] Road Blockout Kit (track meshes) — https://www.fab.com/listings/dc6b14b3-f7eb-4a53-a589-eb3d5bfbb8d5
 - [ ] Stylized Asphalt (road surface) — https://www.fab.com/listings/687e0724-f572-4225-b80b-0d8284ad0056
