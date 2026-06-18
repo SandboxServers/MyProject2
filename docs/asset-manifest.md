@@ -11,6 +11,24 @@ build-or-buy gaps. Based on the targeted FAB sweep, 2026-06-17. Raw research:
 - **Player car:** single car; free **arcade stand-in** for now (no free open-wheel exists).
 - **Track:** **modular road kit** combo (meshes + stylized asphalt + custom arrow decals).
 
+## Import status — 2026-06-17 ✅
+5 of 7 Tier-1 packs imported into MyProject2 (asset count 148 → 749), all at **v5.7**
+(no 5.8 build offered — recompiled on load, as expected). Folder map:
+- Dynamic Sky & Light → `/Game/PWL_Light_Manager` (`BP_Lighting_Manager`)
+- Road Blockout Kit → `/Game/RoadBlockoutKit` (`SM_Road` + bonus cones/barrier fences)
+- Stylized Asphalt → `/Game/Stylized_Asphalt` (`M_Stylized_Asphalt`)
+- Stylized Landscape & Grass → `/Game/StylizedGrassByMayu`
+- Freeway Props (barriers) → `/Game/Deko_MatrixDemo` (452 assets — heavy; trim unused later)
+
+**Not imported:**
+- **Instant Chrono Kit** → ❌ it's a *code plugin* with no 5.8 binary (code plugins aren't
+  forward-compatible). **Building the lap/checkpoint timer ourselves in Blueprint instead.**
+- **Drift Heaven (car)** → ⏳ it's a *complete project* ("Create Project", not "Add to
+  Project"); pending decision: migrate the car out of it, or just use the template car.
+
+Note: a working drivable car already exists in `/Game/Vehicles` + `/Game/VehicleTemplate`
+(`Lvl_VehicleBasic`) — grey-boxing is **not blocked** on the car.
+
 ## Legend
 Status: ✅ free pick found · ⚠️ combine/author · ❌ gap (build/buy) · 🛠️ we make it
 Tier: **T1** must-have foundation · **T2** nice · **T3** polish/deferred

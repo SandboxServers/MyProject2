@@ -3,6 +3,13 @@
 > **Only Derek's Claude writes this file.** Newest entry on top. Steven reads it to
 > catch up on what Derek's side did. Keep entries short; durable decisions go to `SHARED.md`.
 
+## 2026-06-17 — Foundation assets imported
+- Did: Claimed + imported 5 environment packs into MyProject2 (sky `/Game/PWL_Light_Manager`, road kit `/Game/RoadBlockoutKit`, asphalt `/Game/Stylized_Asphalt`, grass `/Game/StylizedGrassByMayu`, barriers `/Game/Deko_MatrixDemo`). 148 → 749 assets. Verified via MCP. See asset-manifest Import status.
+- State: environment foundation in. Car + timer outstanding (not blocking).
+- Next: decide car (template car now vs migrate Drift Heaven), then grey-box MVP. Build lap timer in BP (Chrono Kit can't install on 5.8).
+- For Steven: Instant Chrono Kit is dead (code plugin, no 5.8 build) — we build the timer ourselves. Drift Heaven is a complete-project, not add-to-project.
+- Pushed: pending this commit.
+
 ## 2026-06-17 — Stadium art direction + foundation asset plan
 - Did: Locked art direction (clean stylized arcade / Trackmania Stadium, ref image in `docs/refs/`). Ran a targeted FAB sweep (4 parallel agents, ~70 queries). Wrote `docs/asset-manifest.md` (curated picks + Tier-1 claim checklist + gaps). Logged decisions in `SHARED.md`.
 - State: foundation asset plan done; nothing built in-editor yet.

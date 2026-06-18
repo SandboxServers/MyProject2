@@ -18,6 +18,8 @@ template (`Lvl_VehicleBasic`). Repo: `SandboxServers/MyProject2`.
 - _2026-06-17 (Derek)_ — **Single player car**; using a free **arcade stand-in** (Drift Heaven) since no free open-wheel car exists. Hero open-wheel car deferred (buy/model later).
 - _2026-06-17 (Derek)_ — **Track = modular road kit combo** (Road Blockout Kit + Stylized Asphalt material + custom arrow decals).
 - _2026-06-17_ — Foundation asset plan locked in `docs/asset-manifest.md` (~85% sourceable free; gaps = track gantries, arrow decals, hero car).
+- _2026-06-17_ — **5 environment packs imported** into MyProject2 (sky, road kit, asphalt, grass, barriers — see asset-manifest Import status). Project went 148 → 749 assets.
+- _2026-06-17_ — **Instant Chrono Kit dropped** (code plugin, no UE 5.8 binary) → we build the lap/checkpoint timer in Blueprint. **Drift Heaven car** is a complete-project type → using the template car for now; migrate Drift Heaven later if wanted.
 
 ## Open questions (from docs/gameplay-sketch.md — resolve here as you go)
 1. Camera/feel: arcade-chase vs template default?
