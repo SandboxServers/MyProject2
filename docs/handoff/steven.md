@@ -15,6 +15,17 @@
 
 ---
 
+## 2026-06-18 — Testing discipline working-agreement → CLAUDE.md (via PR)
+- Did: added a **"Testing discipline"** sub-section to the Working agreements in `CLAUDE.md`
+  (real, behavior-verifying tests for any change where a meaningful automated test is feasible;
+  no testing theater; subjective/untestable work goes to playtest + player-advocate with a
+  stated reason; qa-test-engineer owns the call). Policy authored by **qa-test-engineer**,
+  PR by **docs-knowledge-keeper**.
+- State: PR open on branch `docs/testing-discipline`; **awaiting Derek's review** (not merged).
+- Next: merge once Derek approves.
+- For Derek: please review the PR (@aura) and approve/comment.
+- Pushed: yes — branch `docs/testing-discipline` (see PR).
+
 ## 2026-06-18 — Lean agent cast stood up as live sub-agents; CLAUDE.md updated
 - Did:
   - Stood up the lean "car-feel-first" cast as **live Claude Code sub-agents**: game-director,

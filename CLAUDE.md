@@ -51,6 +51,23 @@ Then `git pull` so you're on the latest.
   expose personal emails in commits or config.
 - Confirm before machine-level tooling/installs outside the project.
 
+### Testing discipline
+- **Changes ship with a test when a meaningful automated test is feasible.** For this
+  project that means the core-loop logic: checkpoint ordering, lap/split timing,
+  frame-rate-independence of timing, restart/respawn state reset, medal evaluation,
+  and ghost/save-load integrity. If it can be asserted deterministically, it gets a test.
+- **No testing theater.** A test must verify actual behavior and be able to *fail* when
+  that behavior breaks. Forbidden: tests that assert nothing real, tautological or
+  mock-only tests that pass regardless of the code, and tests added solely to move a
+  coverage number. A test that can't fail is worse than no test.
+- **Some things aren't meaningfully auto-testable — don't fake a test for them.**
+  Subjective feel, art, juice, and "is it fun" are validated by human playtest and the
+  **player-advocate**, not by hollow assertions.
+- **If a change genuinely can't be tested** (or a test isn't worth the cost), the author
+  **states why** in the PR/handoff entry — never skip silently.
+- **The qa-test-engineer owns the call** on what's testable, what's theater, and whether
+  a test is real. Test strategy and coverage are its domain.
+
 ## Agent cast (specialist sub-agents)
 The game is built by a cast of specialist agents — full reference roster + seed prompts in
 `docs/proposals/agent-cast.md`. Route work to the right specialist instead of doing everything
