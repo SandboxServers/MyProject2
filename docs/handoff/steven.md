@@ -15,6 +15,19 @@
 
 ---
 
+## 2026-06-18 — Agent definitions + memories committed to the repo (via PR)
+- Did: committed the **lean-cast agent definitions** (`.claude/agents/` — game-director,
+  ue5-technical-director, vehicle-handling-engineer, gameplay-systems-engineer,
+  game-feel-engineer, qa-test-engineer, player-advocate, docs-knowledge-keeper) and their
+  **memory files** (`.claude/agent-memory/`) as version-controlled repo files, so Derek's
+  sessions share the same cast + learned knowledge.
+- Privacy: re-verified no real emails before committing; **one personal email had already been
+  scrubbed** from `.claude/agents/docs-knowledge-keeper.md` and was not re-added.
+- State: PR open on branch `chore/commit-agents-and-memory`; **awaiting Derek's review** (not merged).
+- Next: merge once Derek approves.
+- For Derek: please review the PR (@aura). After merge, you'll have the same agents + memories.
+- Pushed: yes — branch `chore/commit-agents-and-memory` (see PR).
+
 ## 2026-06-18 — Testing discipline working-agreement → CLAUDE.md (via PR)
 - Did: added a **"Testing discipline"** sub-section to the Working agreements in `CLAUDE.md`
   (real, behavior-verifying tests for any change where a meaningful automated test is feasible;
