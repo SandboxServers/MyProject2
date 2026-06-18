@@ -27,6 +27,13 @@ Then `git pull` so you're on the latest.
   issue** (`gh issue list`), which both of us can read/comment on.
 
 ## Working agreements
+- **This repo is the single source of truth.** All progress, decisions, and knowledge
+  live here (handoff files, `docs/`, commits, GitHub issues) so both Derek and Steven
+  stay in sync.
+- **No Notion for this project.** Steven doesn't use Notion, so it would split the
+  knowledge. **Do NOT offer or upload Notion session summaries** here — this overrides
+  the global end-of-session Notion rule. Record session progress in `docs/handoff/`
+  and commit + push instead.
 - **Phase right now: sketching/research only — do NOT build in-editor** unless the
   current request explicitly says to build. See `docs/`.
 - **Privacy:** commits must use the GitHub noreply identity (no real emails). Never
