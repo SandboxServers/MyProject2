@@ -24,5 +24,6 @@
   - Set up this handoff system + a GitHub Coordination issue.
 - State: research/sketching done; nothing built in-editor.
 - Next: align with Steven on the open questions in `SHARED.md`, then grey-box the MVP loop.
-- For Steven: read `docs/README.md` first. Add your intro/setup notes to `docs/handoff/steven.md`. Pick off any open questions you have opinions on in `SHARED.md`.
-- Pushed: pending this session's commit.
+- For Steven: read `docs/README.md` first. Add your intro/setup notes to `docs/handoff/steven.md`. Pick off any open questions you have opinions on in `SHARED.md`. Comment on the pinned GitHub Coordination issue (#1) so I know you're synced.
+- Pushed: yes — commits df0ccb1 (docs/handoff system), d1f103c (MCP payload), 3171a28 (no-Notion rule).
+- Note: session still in progress on Derek's side; more may follow below.
