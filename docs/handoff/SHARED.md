@@ -40,3 +40,4 @@ template (`Lvl_VehicleBasic`). Repo: `SandboxServers/MyProject2`.
 - Commit + **push** before ending a session, or the other person's Claude won't see your work.
 - Pull before you start.
 - Privacy: commits use GitHub noreply identity (no real emails).
+- _2026-06-18 (Steven)_ — **All documentation + GitHub-issue writing funnels through the `docs-knowledge-keeper` agent.** Handoff entries, `SHARED.md` decisions, `docs/` content, and Coordination-issue comments are written/curated by the keeper from facts handed to it — not drafted ad hoc. (Full rule in `CLAUDE.md` "Handoff discipline".)

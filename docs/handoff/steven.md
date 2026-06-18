@@ -15,6 +15,22 @@
 
 ---
 
+## 2026-06-18 — Lean agent cast stood up as live sub-agents; CLAUDE.md updated
+- Did:
+  - Stood up the lean "car-feel-first" cast as **live Claude Code sub-agents**: game-director,
+    ue5-technical-director, vehicle-handling-engineer, gameplay-systems-engineer,
+    game-feel-engineer, qa-test-engineer, player-advocate, docs-knowledge-keeper.
+  - Updated **`CLAUDE.md`**: added an **"Agent cast"** section (active set + deferred roster),
+    flipped the phase line to **build started (2026-06-18), sketching gate lifted**, and added a
+    rule that **all documentation + GitHub-issue writing funnels through docs-knowledge-keeper**.
+    Also added `docs/proposals/agent-cast.md` + `skills.md` to the Key docs table.
+  - Logged the doc/issue **funnel convention** in `SHARED.md`.
+- State: done & pushed; lean cast is live.
+- Next: split first-wave skills (per `docs/proposals/skills.md`); start grey-boxing the core loop.
+- For Derek: route doc/handoff/issue writing through the keeper from now on (CLAUDE.md). Deferred
+  agents (artists, track-designer, multiplayer, etc.) stand up as work demands.
+- Pushed: yes — see commit below.
+
 ## 2026-06-18 — Pushed ridgeline-rush branch; skills proposal; ack'd cast approval
 - Did:
   - Pushed **`backup/ridgeline-rush`** to origin (unblocks Derek — it has the Blueprint

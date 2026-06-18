@@ -27,6 +27,14 @@ Then `git pull` so you're on the latest.
   issue** (`gh issue list`), which both of us can read/comment on.
 - **Full branching + handoff conventions: `docs/workflow.md`** — follow it once we move
   past the sketching phase (branch + PR per change, handoff entry in the PR, etc.).
+- **All documentation + GitHub-issue writing funnels through the `docs-knowledge-keeper`
+  agent.** Handoff entries (`steven.md`/`aura.md`), `SHARED.md` decisions, `docs/` content,
+  READMEs, gotcha/decision records, and Coordination-issue comments are written and curated
+  by the keeper — not drafted ad hoc by the main session or other agents. Other agents and
+  the main session **hand it the facts and let it produce the durable record.** The keeper
+  still writes ONLY the current person's handoff file and keeps-both on `SHARED.md` conflicts.
+  (This is how the "do the paperwork on every push" discipline gets executed — delegate it
+  to the keeper, then commit + push.)
 
 ## Working agreements
 - **This repo is the single source of truth.** All progress, decisions, and knowledge
@@ -36,11 +44,27 @@ Then `git pull` so you're on the latest.
   knowledge. **Do NOT offer or upload Notion session summaries** here — this overrides
   the global end-of-session Notion rule. Record session progress in `docs/handoff/`
   and commit + push instead.
-- **Phase right now: sketching/research only — do NOT build in-editor** unless the
-  current request explicitly says to build. See `docs/`.
+- **Phase: build started (2026-06-18).** The sketching-only gate is **lifted** — grey-boxing
+  the core driving loop in-editor is in scope. Check `docs/handoff/SHARED.md` "Current focus"
+  for the live state before building.
 - **Privacy:** commits must use the GitHub noreply identity (no real emails). Never
   expose personal emails in commits or config.
 - Confirm before machine-level tooling/installs outside the project.
+
+## Agent cast (specialist sub-agents)
+The game is built by a cast of specialist agents — full reference roster + seed prompts in
+`docs/proposals/agent-cast.md`. Route work to the right specialist instead of doing everything
+in the main session. **Active now (lean "car-feel-first" set):**
+- **game-director** — vision, scope, "what next / should we even build this"; the front door and scope gatekeeper.
+- **ue5-technical-director** — UE5.8 architecture, project/module structure, source-control discipline, perf/frame-time budget.
+- **vehicle-handling-engineer** — Chaos Vehicle feel (throttle/steer/air/landing/per-surface); the #1 system.
+- **gameplay-systems-engineer** — checkpoints, lap/split timing, race state, instant restart/respawn, medals, modes.
+- **game-feel-engineer** — camera/FOV/juice/Niagara/rumble; the sensation of speed (built on top of handling).
+- **player-advocate** — the regular-player gut-check: is it fun, fair, readable, welcoming?
+- **qa-test-engineer** — automated + PIE validation, regression, bug triage (tests, doesn't fix or judge fun).
+- **docs-knowledge-keeper** — docs, handoff logs, decisions, onboarding, gotchas (see the funnel rule above).
+
+**Deferred (in the roster, not yet stood up):** environment-artist & vehicle-prop-artist (art pass; merge the latter into the former then), track-designer, track-editor-engineer, replay-ghost-engineer, ui-ux-engineer, multiplayer-netcode-engineer, tools-automation-engineer, performance-optimizer, art-director, audio-designer, retrospective-agent. Stand them up as the work demands. Track editor and multiplayer are **phase-two** (after the core loop is proven fun).
 
 ## MCP control
 This project is wired for MCP so Claude can drive the editor. To connect: launch the
@@ -68,3 +92,5 @@ editor, then run `/mcp`. Full reconnect/troubleshooting steps: `docs/mcp-setup.m
 | `docs/fab-free-assets.md` | Free FAB asset shortlist |
 | `docs/mcp-setup.md` | MCP reconnect & troubleshooting |
 | `docs/handoff/` | Per-person handoff logs + SHARED state |
+| `docs/proposals/agent-cast.md` | Agent roster + seed prompts (active + reference) |
+| `docs/proposals/skills.md` | Proposed cross-discipline skill library |
