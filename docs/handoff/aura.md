@@ -3,6 +3,13 @@
 > **Only Derek's Claude writes this file.** Newest entry on top. Steven reads it to
 > catch up on what Derek's side did. Keep entries short; durable decisions go to `SHARED.md`.
 
+## 2026-06-17 — Stadium art direction + foundation asset plan
+- Did: Locked art direction (clean stylized arcade / Trackmania Stadium, ref image in `docs/refs/`). Ran a targeted FAB sweep (4 parallel agents, ~70 queries). Wrote `docs/asset-manifest.md` (curated picks + Tier-1 claim checklist + gaps). Logged decisions in `SHARED.md`.
+- State: foundation asset plan done; nothing built in-editor yet.
+- Next: claim the Tier-1 assets in FAB → import → start grey-boxing the MVP loop. Tackle the gaps (track gantries, arrow decals, hero car) as art tasks.
+- For Steven: review `docs/asset-manifest.md` + the ref image; weigh in on art direction / open questions via Issue #1. No free open-wheel car or track-arch asset exists — flagged as build/buy.
+- Pushed: pending this commit.
+
 ## Template for a new entry
 ```
 ## YYYY-MM-DD — <one-line summary>

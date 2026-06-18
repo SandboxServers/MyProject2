@@ -14,6 +14,10 @@ template (`Lvl_VehicleBasic`). Repo: `SandboxServers/MyProject2`.
 ## Decisions made
 - _2026-06-17_ — Asset discovery via firecrawl on FAB JSON API (not FAB-in-UE). See `docs/asset-strategy.md`.
 - _2026-06-17_ — Coordination model: per-person handoff files in git + GitHub Issues. (Notion ruled out — Steven doesn't use it.)
+- _2026-06-17 (Derek)_ — **Art direction: clean stylized arcade, Trackmania-2020 Stadium look** (ref: `docs/refs/ref-stadium-look.jpg`). Theme: stadium/grass, day. Steven — shout on Issue #1 if you disagree.
+- _2026-06-17 (Derek)_ — **Single player car**; using a free **arcade stand-in** (Drift Heaven) since no free open-wheel car exists. Hero open-wheel car deferred (buy/model later).
+- _2026-06-17 (Derek)_ — **Track = modular road kit combo** (Road Blockout Kit + Stylized Asphalt material + custom arrow decals).
+- _2026-06-17_ — Foundation asset plan locked in `docs/asset-manifest.md` (~85% sourceable free; gaps = track gantries, arrow decals, hero car).
 
 ## Open questions (from docs/gameplay-sketch.md — resolve here as you go)
 1. Camera/feel: arcade-chase vs template default?
