@@ -1,52 +1,48 @@
-# AGENT.md — instructions for an AI coding agent (e.g. Claude Code)
+# CLAUDE.md — Project Guide
 
-You are setting up **Unreal Engine 5.8 MCP control** for the user using this kit.
-Follow these steps. Do the file operations yourself; stop and ask the human only
-where noted. Everything here is local filesystem + PowerShell — you do NOT need an
-Unreal/MCP connection to perform the setup itself.
+Trackmania-style arcade racer built in **Unreal Engine 5.8** (ChaosVehicles + the
+Vehicle template, `Lvl_VehicleBasic`). Collaborators: **Derek (aura)** and **Steven**,
+each working with their own Claude Code session against the shared repo
+`SandboxServers/MyProject2`.
 
-## Prerequisites to confirm with the user first
-- **Unreal Engine 5.8** is installed (ships the required experimental engine plugins:
-  ModelContextProtocol, ToolsetRegistry, EditorToolset). If they're on a different
-  engine version, STOP — this kit targets 5.8.
-- You know the **path to their UE 5.8 project** (a folder containing a `.uproject`,
-  or the `.uproject` itself). If you don't, ask.
+## ⭐ START HERE — every session, before doing anything
+Read these to catch up on the other person's work and the agreed state:
+1. `docs/handoff/SHARED.md` — agreed decisions, current focus, open questions
+2. `docs/handoff/aura.md` — Derek's log
+3. `docs/handoff/steven.md` — Steven's log
+4. `docs/README.md` — index of all design/research docs
 
-## Steps you perform
-1. Locate this kit folder (it contains `bootstrap-mcp.ps1` and `payload/`).
-2. Run the installer, passing the user's project path:
-   ```powershell
-   .\bootstrap-mcp.ps1 -ProjectPath "<their project folder or .uproject>"
-   ```
-   If script execution is blocked, run it in a process-scoped bypass:
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File .\bootstrap-mcp.ps1 -ProjectPath "<...>"
-   ```
-   (Equivalent manual steps, if you prefer not to use the script: copy
-   `payload/MCPFullControl` into `<project>/Plugins/`, copy `payload/.mcp.json` to the
-   project root, and add `{"Name":"ModelContextProtocol","Enabled":true}` and
-   `{"Name":"EditorToolset","Enabled":true}` to the `Plugins` array in the `.uproject`.)
-3. Verify the result: `<project>/Plugins/MCPFullControl/MCPFullControl.uplugin` exists,
-   `<project>/.mcp.json` exists, and the `.uproject` lists both plugins. The script also
-   leaves a `.uproject.bak` backup.
-4. (Optional) Launch the editor so the MCP server comes up:
-   ```powershell
-   Start-Process "<...>\YourProject.uproject"
-   ```
-   The ModelContextProtocol server starts on editor launch (http://127.0.0.1:8000/mcp)
-   and `init_unreal.py` registers the full-control toolset automatically. You do NOT
-   need to run `ModelContextProtocol.RefreshTools` on a fresh launch — that's only for
-   after toolsets are added/edited mid-session.
+Then `git pull` so you're on the latest.
 
-## Where you MUST hand back to the human
-- **You cannot connect yourself to the new MCP server.** Your MCP tools load when your
-  session starts and reads `.mcp.json`. After you create that file, tell the human:
-  > "Setup complete. Run `/mcp` (or restart me) so I pick up the `unreal-mcp` server,
-  >  then I can drive the editor."
-- If the editor shows any first-launch dialog about enabling plugins, ask the human to
-  accept it (you can't click editor UI).
+## Handoff discipline (how the two of us stay in sync)
+- This is an **async, git-based** coordination system. The other person sees your work
+  only after you **commit and push**.
+- **Write ONLY your own handoff file** — Derek's Claude edits `aura.md`, Steven's Claude
+  edits `steven.md`. This avoids merge conflicts. `SHARED.md` is for agreed decisions
+  (edit deliberately; if it conflicts on pull, keep both sides and reconcile).
+- At the **end of a work session**: add an entry to your handoff file, move any durable
+  decision into `SHARED.md`, then **commit + push**.
+- At the **start**: pull, read the handoff files (above).
+- Threaded discussion that doesn't belong in files → the pinned **GitHub "Coordination"
+  issue** (`gh issue list`), which both of us can read/comment on.
 
-## After reconnect — sanity check
-Once reconnected, confirm tools are live by calling a read-only MCP tool, e.g. get the
-current level or list actors. If the `unreal-mcp` tools aren't present, the editor isn't
-running or `.mcp.json` wasn't picked up — re-launch the editor and reconnect.
+## Working agreements
+- **Phase right now: sketching/research only — do NOT build in-editor** unless the
+  current request explicitly says to build. See `docs/`.
+- **Privacy:** commits must use the GitHub noreply identity (no real emails). Never
+  expose personal emails in commits or config.
+- Confirm before machine-level tooling/installs outside the project.
+
+## MCP control
+This project is wired for MCP so Claude can drive the editor. To connect: launch the
+editor, then run `/mcp`. Full reconnect/troubleshooting steps: `docs/mcp-setup.md`.
+
+## Key docs
+| Doc | Purpose |
+|---|---|
+| `docs/README.md` | Docs index |
+| `docs/gameplay-sketch.md` | Core loop, MVP scope, open design questions |
+| `docs/asset-strategy.md` | How we find/acquire assets |
+| `docs/fab-free-assets.md` | Free FAB asset shortlist |
+| `docs/mcp-setup.md` | MCP reconnect & troubleshooting |
+| `docs/handoff/` | Per-person handoff logs + SHARED state |
