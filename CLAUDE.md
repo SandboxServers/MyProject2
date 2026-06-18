@@ -46,6 +46,18 @@ Then `git pull` so you're on the latest.
 This project is wired for MCP so Claude can drive the editor. To connect: launch the
 editor, then run `/mcp`. Full reconnect/troubleshooting steps: `docs/mcp-setup.md`.
 
+## Research & documentation — use Context7 (when in doubt, read docs)
+- **Default to looking things up, not guessing.** Any time you research, need
+  information, are unsure about an API/syntax/behavior, or something is unclear:
+  **invoke the `context7` skill and read the docs first.** Training memory drifts;
+  Context7 returns current, version-accurate documentation.
+- This applies to libraries, frameworks, SDKs, plugins, and APIs — before writing
+  non-trivial code against a dependency, read its current docs.
+- The `context7` MCP server (in `.mcp.json`) must be connected (`/mcp`). Usage
+  workflow + efficiency rules live in the skill: `.claude/skills/context7/SKILL.md`.
+- Fallbacks: for Anthropic/Claude API use the `claude-api` skill; for Unreal C++/
+  Blueprint engine internals (thin Context7 coverage) prefer official UE docs / web.
+
 ## Key docs
 | Doc | Purpose |
 |---|---|

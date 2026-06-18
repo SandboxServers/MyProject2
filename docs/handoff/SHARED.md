@@ -20,6 +20,8 @@ template (`Lvl_VehicleBasic`). Repo: `SandboxServers/MyProject2`.
 - _2026-06-17_ — Foundation asset plan locked in `docs/asset-manifest.md` (~85% sourceable free; gaps = track gantries, arrow decals, hero car).
 - _2026-06-17_ — **5 environment packs imported** into MyProject2 (sky, road kit, asphalt, grass, barriers — see asset-manifest Import status). Project went 148 → 749 assets.
 - _2026-06-17_ — **Instant Chrono Kit dropped** (code plugin, no UE 5.8 binary) → we build the lap/checkpoint timer in Blueprint. **Drift Heaven car** is a complete-project type → using the template car for now; migrate Drift Heaven later if wanted.
+- _2026-06-18 (Steven)_ — **`.uproject` EngineAssociation must be the portable `"5.8"`**, never a machine-specific `{GUID}` — a GUID triggers a "convert project" prompt on the other person's machine.
+- _2026-06-18 (Steven)_ — **Context7 MCP is the research default.** Added to `.mcp.json` + `context7` skill + a `CLAUDE.md` rule: when researching/unsure, read current docs via Context7 first. (Both will be prompted to approve the `context7` server on next pull.)
 
 ## Open questions (from docs/gameplay-sketch.md — resolve here as you go)
 1. Camera/feel: arcade-chase vs template default?
