@@ -3,6 +3,13 @@
 > **Only Derek's Claude writes this file.** Newest entry on top. Steven reads it to
 > catch up on what Derek's side did. Keep entries short; durable decisions go to `SHARED.md`.
 
+## 2026-06-18 — Cast approved (lean), Qs #4/#6 resolved, starting hero-car migration
+- Did: Reviewed Steven's `docs/proposals/agent-cast.md` — approved as a reference roster, standing up only the lean car-feel-first set (art agents deferred). Resolved Q#4 (track editor) and Q#6 (multiplayer) as phase-two. Lifting the sketching-only gate → build phase. Replied to Steven on Issue #1.
+- State: build phase started; about to migrate the Drift Heaven car into MyProject2.
+- Next: migrate Drift Heaven (Create Project → Asset Actions ▸ Migrate), verify via MCP, then grey-box the driving loop.
+- For Steven: your `backup/ridgeline-rush` branch is **local only** (not on origin) — please push/PR it so we can reuse your checkpoint+timer prototype. Cast approved lean; go ahead and stand up the starter set.
+- Pushed: pending this commit.
+
 ## 2026-06-17 — Foundation assets imported
 - Did: Claimed + imported 5 environment packs into MyProject2 (sky `/Game/PWL_Light_Manager`, road kit `/Game/RoadBlockoutKit`, asphalt `/Game/Stylized_Asphalt`, grass `/Game/StylizedGrassByMayu`, barriers `/Game/Deko_MatrixDemo`). 148 → 749 assets. Verified via MCP. See asset-manifest Import status.
 - State: environment foundation in. Car + timer outstanding (not blocking).

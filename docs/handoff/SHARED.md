@@ -9,7 +9,8 @@ Trackmania-style arcade racer. Unreal Engine **5.8**, ChaosVehicles + Vehicle
 template (`Lvl_VehicleBasic`). Repo: `SandboxServers/MyProject2`.
 
 ## Current focus
-- Research/sketching phase. **No in-editor building yet.** See `docs/`.
+- **Build phase started.** Foundation assets imported; migrating the hero car (Drift
+  Heaven) into MyProject2, then grey-boxing the core driving loop. Sketching-only gate lifted.
 
 ## Decisions made
 - _2026-06-17_ — Asset discovery via firecrawl on FAB JSON API (not FAB-in-UE). See `docs/asset-strategy.md`.
@@ -22,14 +23,17 @@ template (`Lvl_VehicleBasic`). Repo: `SandboxServers/MyProject2`.
 - _2026-06-17_ — **Instant Chrono Kit dropped** (code plugin, no UE 5.8 binary) → we build the lap/checkpoint timer in Blueprint. **Drift Heaven car** is a complete-project type → using the template car for now; migrate Drift Heaven later if wanted.
 - _2026-06-18 (Steven)_ — **`.uproject` EngineAssociation must be the portable `"5.8"`**, never a machine-specific `{GUID}` — a GUID triggers a "convert project" prompt on the other person's machine.
 - _2026-06-18 (Steven)_ — **Context7 MCP is the research default.** Added to `.mcp.json` + `context7` skill + a `CLAUDE.md` rule: when researching/unsure, read current docs via Context7 first. (Both will be prompted to approve the `context7` server on next pull.)
+- _2026-06-18 (Derek)_ — **Agent cast approved (lean).** Full 21 in `docs/proposals/agent-cast.md` kept as a reference roster; stand up only the lean car-feel-first starter set (game-director, technical-director, vehicle-handling-engineer, gameplay-systems-engineer, game-feel-engineer, player-advocate; +qa-test-engineer once there's something to test). **Both art agents deferred** (use template car + imported free assets during grey-box; merge `vehicle-prop-artist` into `environment-artist` at art-pass time).
+- _2026-06-18 (Derek)_ — **Q#4 (in-game track editor) and Q#6 (multiplayer) resolved: PHASE-TWO** — not built until the core driving loop is proven fun (multiplayer = async leaderboards/ghosts first, live MP only if earned).
+- _2026-06-18 (Derek)_ — **Hero car:** migrating the Drift Heaven car into MyProject2 (it's a complete-project asset → Create Project + Asset Actions ▸ Migrate). Template car remains the fallback.
 
 ## Open questions (from docs/gameplay-sketch.md — resolve here as you go)
 1. Camera/feel: arcade-chase vs template default?
 2. Art direction: stylized/low-poly vs realistic?
 3. Ghosts in MVP or later?
-4. In-game track editor a goal, or author tracks in-editor only?
+4. ~~In-game track editor a goal?~~ → **RESOLVED: phase-two** (after core loop is fun).
 5. v1 scope: one polished track vs a few short tracks with medals?
-6. Multiplayer ever in scope?
+6. ~~Multiplayer ever in scope?~~ → **RESOLVED: phase-two** (async leaderboards/ghosts first).
 7. Which boost/stunt mechanics are core to our identity?
 
 ## Conventions
