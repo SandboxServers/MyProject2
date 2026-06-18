@@ -25,6 +25,8 @@ Then `git pull` so you're on the latest.
 - At the **start**: pull, read the handoff files (above).
 - Threaded discussion that doesn't belong in files → the pinned **GitHub "Coordination"
   issue** (`gh issue list`), which both of us can read/comment on.
+- **Full branching + handoff conventions: `docs/workflow.md`** — follow it once we move
+  past the sketching phase (branch + PR per change, handoff entry in the PR, etc.).
 
 ## Working agreements
 - **This repo is the single source of truth.** All progress, decisions, and knowledge
@@ -48,6 +50,7 @@ editor, then run `/mcp`. Full reconnect/troubleshooting steps: `docs/mcp-setup.m
 | Doc | Purpose |
 |---|---|
 | `docs/README.md` | Docs index |
+| `docs/workflow.md` | Branching + handoff conventions (how we collaborate) |
 | `docs/gameplay-sketch.md` | Core loop, MVP scope, open design questions |
 | `docs/asset-strategy.md` | How we find/acquire assets |
 | `docs/fab-free-assets.md` | Free FAB asset shortlist |

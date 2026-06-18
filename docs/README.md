@@ -10,6 +10,7 @@ ChaosVehicles + the Vehicle template (`Lvl_VehicleBasic`).
 
 | Doc | What's in it |
 |---|---|
+| [workflow.md](workflow.md) | How we collaborate — branching + handoff conventions, what goes where |
 | [asset-strategy.md](asset-strategy.md) | How to find/acquire FAB assets — approach comparison & recommendation, import workflow, caveats |
 | [fab-free-assets.md](fab-free-assets.md) | Shortlist of 27 free UE assets from FAB, categorized for this game |
 | [gameplay-sketch.md](gameplay-sketch.md) | Core loop, MVP scope, track-building options, open questions for us to decide |
