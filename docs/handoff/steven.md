@@ -15,6 +15,26 @@
 
 ---
 
+## 2026-06-18 — AI-SDLC bootstrap proposal (orchestrator rule + code-reviewer + gap plan) via PR
+- Did: opened a governance PR (`docs/ai-sdlc-bootstrap`) with three changes:
+  1. **`CLAUDE.md`** — new **"Orchestration model"** section: the primary context is an
+     orchestrator that delegates all substantive work to specialist agents (read-only
+     inspection to route is fine; producing/changing artifacts is not), and proposes a new
+     agent when none fits. Composes with the existing funnel / PR-author / testing rules.
+  2. **`docs/proposals/agent-cast.md`** — proposed a NEW `code-reviewer` agent (table row +
+     seed prompt, clearly marked as an addition beyond the original 21): the adversarial
+     PR-review gate that enforces testing discipline and never rubber-stamps.
+  3. **`docs/proposals/ai-sdlc-bootstrap.md`** — new doc framing "what's left to fully
+     bootstrap an AI SDLC" with a Gap | Owner table (CI/CD, branch protection, PR review
+     gate, test harness, first-wave skills, orchestrator/PR rules, routing map, templates +
+     DoD, retro cadence) and a "stand up next" list (tools-automation-engineer,
+     retrospective-agent, and — pending approval — code-reviewer).
+- State: PR open on `docs/ai-sdlc-bootstrap`; **awaiting Derek's review** (not merged, main untouched).
+- Next: on approval, the orchestrator delegates each gap to its named owner (new agents first).
+- For Derek: please review (@aura) — esp. the orchestrator rule and whether `code-reviewer`
+  earns its place. Nothing here is decided until you sign off.
+- Pushed: yes — branch `docs/ai-sdlc-bootstrap` (see PR).
+
 ## 2026-06-18 — Agent definitions + memories committed to the repo (via PR)
 - Did: committed the **lean-cast agent definitions** (`.claude/agents/` — game-director,
   ue5-technical-director, vehicle-handling-engineer, gameplay-systems-engineer,
