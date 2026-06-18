@@ -3,6 +3,21 @@
 > **Only Derek's Claude writes this file.** Newest entry on top. Steven reads it to
 > catch up on what Derek's side did. Keep entries short; durable decisions go to `SHARED.md`.
 
+## 2026-06-18 — Git LFS for assets (PR #6), reviewed Steven's governance PR #5
+- Did:
+  - Synced local tree to `main` @ 60d3139 (now carries the agent cast, testing-discipline, and the playable loop). Deleted the merged `feat/greybox-loop` branch (local + remote).
+  - Caught & discarded a `.uproject` regression: the editor had rewritten `EngineAssociation` from the portable `"5.8"` back to a machine-specific GUID — the exact thing that triggers a "convert project" prompt on Steven's machine. Restored it to `"5.8"`. **Recurring gotcha: the editor silently rewrites this on every launch, so it must be discarded before every commit.**
+  - **Resolved the FAB-asset-sharing question → Git LFS.** Created `.gitattributes` (tracks `*.uasset`/`*.umap` + common binary source art via LFS), committed the 647 foundation FAB assets (~4.7 GB: Deko freeway pack, sky/PWL, Stylized_Asphalt, RoadBlockoutKit, StylizedGrassByMayu, DriftHeaven hero car) to branch `chore/git-lfs-assets`, pushed (LFS upload succeeded). Opened **PR #6**; LGTM'd it myself but am holding the merge for Steven's review.
+  - Reviewed Steven's **PR #5** (AI-SDLC governance) with request-changes: approved the `code-reviewer` agent; accepted `ai-sdlc-bootstrap.md` as a *deferred roadmap* (heavy items — CI/CD, UE test harness, branch protection — gated behind "core loop proven fun"); asked for the orchestrator rule to be softened to allow trivial mechanical work (flagged the bootstrap gap: owners like `tools-automation-engineer` aren't stood up yet, so the rule can't function today).
+  - Reloaded the CC session so the lean agent cast + docs-knowledge-keeper are now registered/invocable.
+- State: both PRs in Steven's court; `main` clean; local on `chore/git-lfs-assets` (this handoff committed on `main`).
+- Next: wire the Drift Heaven car (`BP_Base_Drift`) as the player pawn over MCP (needs editor + MCP auto-start); art pass (apply sky/grass/asphalt for the Stadium look) once PR #6 merges.
+- For Steven:
+  - Review **PR #6** — **run `git lfs install` before your next pull** or you'll get LFS pointer files instead of the real assets.
+  - Make the one orchestrator-rule tweak on **PR #5** and it's an approve.
+  - Decide on Deko pruning (~4 GB / ~40% of the 10 GB free LFS tier, little used in greybox) before #6 merges — pruning LFS history later is a chore.
+- Pushed: yes (this commit, on main).
+
 ## 2026-06-18 — 🏁 First playable loop PROVEN (UAT passed)
 - Did: Adopted Steven's RidgelineRush race system + his tested `Lvl_VehicleBasic` (8 indexed checkpoints, RaceManager, BP_TimeTrialGameMode, SM_Track_10M) onto branch `feat/greybox-loop`. Migrated DriftHeaven `Demo/` so the drift car's input assets now exist. Verified via MCP, then **UAT: full lap, 8/8 checkpoints in order, FINISH at 8.46s.**
 - State: core driving loop works end-to-end. PR'd to main.

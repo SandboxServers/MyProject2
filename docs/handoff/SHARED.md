@@ -26,6 +26,7 @@ template (`Lvl_VehicleBasic`). Repo: `SandboxServers/MyProject2`.
 - _2026-06-18 (Derek)_ — **Agent cast approved (lean).** Full 21 in `docs/proposals/agent-cast.md` kept as a reference roster; stand up only the lean car-feel-first starter set (game-director, technical-director, vehicle-handling-engineer, gameplay-systems-engineer, game-feel-engineer, player-advocate; +qa-test-engineer once there's something to test). **Both art agents deferred** (use template car + imported free assets during grey-box; merge `vehicle-prop-artist` into `environment-artist` at art-pass time).
 - _2026-06-18 (Derek)_ — **Q#4 (in-game track editor) and Q#6 (multiplayer) resolved: PHASE-TWO** — not built until the core driving loop is proven fun (multiplayer = async leaderboards/ghosts first, live MP only if earned).
 - _2026-06-18 (Derek)_ — **Hero car:** migrating the Drift Heaven car into MyProject2 (it's a complete-project asset → Create Project + Asset Actions ▸ Migrate). Template car remains the fallback.
+- _2026-06-18 (Derek)_ — **Asset sharing resolved: Git LFS.** FAB binary content (`*.uasset`/`*.umap`) is tracked via Git LFS (`.gitattributes`); foundation packs (~4.7 GB) committed (PR #6). Free GitHub LFS tier = 10 GB storage+bandwidth. Both collaborators must run `git lfs install`. Open: whether to prune the ~4 GB Deko pack (claim-own instead) before it's locked into main's LFS history.
 
 ## Open questions (from docs/gameplay-sketch.md — resolve here as you go)
 1. Camera/feel: arcade-chase vs template default?
