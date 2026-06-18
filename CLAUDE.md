@@ -83,6 +83,12 @@ in the main session. **Active now (lean "car-feel-first" set):**
 
 **Deferred (in the roster, not yet stood up):** environment-artist & vehicle-prop-artist (art pass; merge the latter into the former then), track-designer, track-editor-engineer, replay-ghost-engineer, ui-ux-engineer, multiplayer-netcode-engineer, tools-automation-engineer, performance-optimizer, art-director, audio-designer, retrospective-agent. Stand them up as the work demands. Track editor and multiplayer are **phase-two** (after the core loop is proven fun).
 
+## Orchestration model — the primary context delegates everything
+- The primary Claude context is an **orchestrator, not an implementer.** It does not write code, docs, tests, config, issues, or PRs itself. It plans, routes work to the right specialist agent, sequences delegations, and integrates results.
+- **All substantive work is delegated to a specialist agent.** Read-only inspection to decide routing is allowed; producing or changing any artifact is not — that goes to an agent.
+- **No fitting agent? Propose one.** When a task has no appropriate agent, the orchestrator proposes a new agent (name + one-paragraph seed prompt in the house style) for approval, then stands it up and delegates — it never just does the work itself.
+- Composes with the existing rules: documentation + GitHub-issue writing funnels through `docs-knowledge-keeper`; the doc writer authors all PRs; `qa-test-engineer` owns testing; changes go via PR, not direct pushes to `main`.
+
 ## MCP control
 This project is wired for MCP so Claude can drive the editor. To connect: launch the
 editor, then run `/mcp`. Full reconnect/troubleshooting steps: `docs/mcp-setup.md`.
