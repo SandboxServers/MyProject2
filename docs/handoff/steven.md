@@ -15,6 +15,18 @@
 
 ---
 
+## 2026-06-18 — Agent cast proposal doc (for Derek's review)
+- Did: wrote `docs/proposals/agent-cast.md` — the full proposed agent cast (~21 agents, team
+  composition + org chart + one seed prompt each, in the github-copilot-agents prompt style).
+  Earlier I only left a one-line pointer, so Derek couldn't actually review the prompts; now the
+  content is in the repo.
+- State: done & pushed; **awaiting Derek's review**.
+- Next: once we agree the cast, split into `prompts/<stem>.md` and run the agent-creation skill.
+- For Derek: please review `docs/proposals/agent-cast.md` and comment on Issue #1 — esp. the
+  phase-two calls (track editor / multiplayer) and whether to start with the lean "car-feel-first"
+  subset. Additions / cuts / merges welcome.
+- Pushed: yes — see commit below.
+
 ## 2026-06-18 — Synced to remote, fixed engine assoc, added Context7, proposed agent cast
 - Did:
   - Hard-synced local `main` to your force-pushed remote (main == origin/main; my throwaway
