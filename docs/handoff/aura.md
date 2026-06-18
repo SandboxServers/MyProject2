@@ -3,6 +3,20 @@
 > **Only Derek's Claude writes this file.** Newest entry on top. Steven reads it to
 > catch up on what Derek's side did. Keep entries short; durable decisions go to `SHARED.md`.
 
+## 2026-06-18 — LFS pruned + merged (PR #6), template car UAT-passed, off-library scenery ditched
+- Did:
+  - **PR #6 reviewed by ue5-technical-director (request-changes), acted on, merged.** Pruned `Deko_MatrixDemo` (~4 GB = ~90% of the payload, barely used in greybox — baking it into main's LFS history is a one-way door) plus 3 vendored demo/showcase maps; hardened `.gitattributes` (`* text=auto` + broadened binary patterns: png/jpg/dds/mp4). Squash-merged to `main` (159da49). **Foundation LFS set is now ~0.42 GB** — DriftHeaven car, PWL sky, Stylized_Asphalt, RoadBlockoutKit (incl. its usable `Lvl_RoadBlockoutKit` greybox level), StylizedGrassByMayu. Deko + the demo maps are NOT in the repo.
+  - **Re-ran UAT on the template-car loop post-merge:** PIE smoke-test + a manual playtest confirmed `BP_VehicleAdvPlayerController_C` possesses `BP_VehicleAdvOffroadCar_C`, 8 checkpoints + RaceManager present, MapCheck 0 errors / 0 warnings. **The template car stays the player pawn — it's the proven first-pass loop.**
+  - **Investigated the Drift car and PARKED it.** Chain: `BP_Base_Drift → BP_VehicleBase → WheeledVehiclePawn`. It's a mobile/touch car — no Input Mapping Context is added on BeginPlay, and the keyboard/gamepad `EnhancedInputAction` events (IA_Throttle/Steering/Brake/Handbrake/etc.) are empty stubs; the real driving logic lives on the `Touch|` thumbstick events. Making it keyboard-drivable needs an IMC + filling those IA event bodies (mirror the touch logic). Deferred as a later enhancement; template car remains.
+  - **Cleaned the off-library scenery out of the shared level (this PR's headline).** `Lvl_VehicleBasic` had 16 placed StaticMeshActors (Tree_0-7, Cliff_0-7) whose meshes/materials referenced `/Game/Fab/Megascans` assets that were never committed (Steven-side only) → ~18 LoadErrors on Derek's machine. **With Steven's explicit OK, these were ditched entirely** — 16 actors removed, level saved (track, checkpoints, cones, RaceManager untouched; level verified clean of all off-library references). On branch `chore/ditch-offlibrary-level-assets`. Re-decoration comes in the art pass using our agreed-library assets.
+- State: `main` carries the pruned ~0.42 GB LFS set; template-car loop UAT-clean; off-library cleanup PR'd.
+- Next: art pass — apply PWL sky / Stylized_Asphalt / grass for the Stadium look, re-decorating where the Megascans scenery used to be.
+- For Steven:
+  - **Run `git lfs install` before you pull** — the PR #6 assets are LFS-tracked, or you'll get pointer files instead of the real content.
+  - Your `/Game/Fab/Megascans` decoration (16 tree/cliff actors) was removed from `Lvl_VehicleBasic` per your OK — they only existed on your machine and were breaking the level on mine. Re-decoration happens in the art pass with agreed-library assets.
+  - **PR #5 still needs your orchestrator-rule softening tweak** — make that one change and it's an approve.
+- Pushed: yes (this handoff committed on main; cleanup on `chore/ditch-offlibrary-level-assets`).
+
 ## 2026-06-18 — Git LFS for assets (PR #6), reviewed Steven's governance PR #5
 - Did:
   - Synced local tree to `main` @ 60d3139 (now carries the agent cast, testing-discipline, and the playable loop). Deleted the merged `feat/greybox-loop` branch (local + remote).
